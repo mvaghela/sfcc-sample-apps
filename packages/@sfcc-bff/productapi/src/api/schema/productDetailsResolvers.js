@@ -45,6 +45,8 @@ const getClientProduct = async (config, id) => {
                 id: id,
                 allImages: true,
             },
+        }).then(productResponse => {
+            return productResponse;
         })
         .catch(e => {
             logger.error(`Error in getClientProduct() for product ${id}`);

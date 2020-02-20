@@ -88,11 +88,21 @@ register(productDetailWireAdaptor, eventTarget => {
                                 promotionId
                                 promotionalPrice
                             }
+                            recommendations {
+                                productId
+                                productName
+                                image {
+                                    title
+                                    link
+                                    alt
+                                  }
+                            }
                         }
                     }
                  `,
                     })
                     .then(result => {
+                        debugger;
                         return result.data.product;
                     })
                     .catch(error => {

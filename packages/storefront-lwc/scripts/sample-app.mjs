@@ -16,12 +16,16 @@ import '@sfcc-core/core-graphql';
 // SFRA Extensions/Services
 //
 import '@sfcc-bff/productapi';
+import './extension/productDetailExtension';
 
 //
 // Import Keys needed to access core services end extensions
 //
 import { CORE_GRAPHQL_KEY, EXPRESS_KEY } from '@sfcc-core/core-graphql';
 import { API_CONFIG_KEY } from '@sfcc-core/apiconfig';
+
+// DF19: Add a product promotion extension to the BFF
+import extension from './extension/productDetailExtension'
 
 class SampleApp {
     /**
